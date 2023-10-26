@@ -7,6 +7,8 @@
     box-sizing: border-box;
     flex-wrap: wrap;
 }
+
+
    
 /* Menu css */ 
 
@@ -90,8 +92,7 @@ header{
     display: flex;
     width: 1000px;
     height: 500px;
-    margin-left: 17rem;
-    margin-top: 10rem;
+    justify-content: center;
 }
 
 
@@ -125,10 +126,73 @@ header{
     max-width: 100%;
 }
 
+/* Video INICIO css*/ 
+
+.video-titulo{
+    font-size: xx-large;
+    font-weight: 100;
+    padding: 2rem 2rem;
+    background-color:rgb(0, 0, 0) ;
+    color: white; 
+}
+
+.video-article{
+     display: flex;
+     justify-content: center;
+     padding: 3rem 3rem;
+     background-color:rgb(146, 74, 74) ;
+     border: 1px solid #000;
+}
+
+.youtube{
+    width: 5rem;
+    margin-left: 30rem;    
+}
+
 /*Proximas carreras css */ 
 
+.carreras-titulo{
+    padding: 3rem;
+    text-align: center;
+    font-size: 70px;
+    font-weight: 300;
+    background-color: rgba(172, 75, 75, 0.637);
+   
+}
 
+.caja-carreras{
+    padding: 2rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr; 
+    gap: 2rem;
 
+}
+.calendario{
+    padding: 3rem;
+    background: rgba(172, 75, 75, 0.637);
+    border: 2px solid rgba(0, 0, 0, 0.486);
+}
+
+.imagen-calendario{
+    width: 100px;
+}
+
+.titulo-calendario{
+    text-align: end;
+    text-decoration: underline;
+    
+}
+
+.texto-calendario{
+    text-align: center;
+}
+
+.mes{ 
+    text-align: center;
+    text-decoration: overline;
+    margin-top: 0.2rem;
+    font-weight: 100;
+}
 
 /* Corredores css */ 
 
@@ -263,28 +327,7 @@ header{
 
 
 
-/* Video css*/ 
 
-.video-titulo{
-    font-size: large;
-    
-    font-family: 'Montserrat', sans-serif;
-    display: flex;
-    margin-left: 20rem;
-    padding: 1.5rem 1rem;
-    background-color:rgb(202, 67, 67) ;
-   
-}
-
-.video-article{
-    padding: 3rem 20rem;
-    display: flex;
-}
-
-.youtube{
-    width: 5rem;
-    margin-left: 30rem;    
-}
 
 /* Contactos css */ 
 
@@ -456,7 +499,7 @@ form h2 {
     color: white;
 }
 
-/* Media Quaries */ 
+/* Media Queries */ 
 
 @media (max-width: 500px) {
   
@@ -489,14 +532,36 @@ form h2 {
         font-size: large;
     }
 
-    .historia-img{
+.historia-img{
         width: 400px;
         height: 200px;
         margin-left: 2rem;
         margin-right: 2rem;
         
     }
-  
+
+    /*PROXIMAS CARRERAS*/ 
+    
+    .carreras-titulo{
+    font-size: 40px;
+    
+    }
+
+     .caja-carreras{
+    grid-template-columns: 1fr ;
+    
+    }
+
+    .calendario:hover{
+        background-color: rgba(180, 4, 4, 0.247);
+    }
+    
+
+     .imagen-calendario{
+    width: 150px;
+    }
+
+
      /*CORREDORES*/ 
     .driver-foto{
         width: 450px;
@@ -538,6 +603,7 @@ form h2 {
     .caja-postcard{
         margin: 6rem 6rem;
         background-color: rgba(181, 182, 173, 0.753);
+        border: 1px solid black;
     }
 
     .postcard-position{
