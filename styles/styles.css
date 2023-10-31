@@ -63,11 +63,11 @@ header{
 
 
 .hero-img {
-      margin-top: 250px 0px 0px 350px;
-      width: 1600px;
-      height: 1000px;
-      display: block;
-      max-width: 100%;
+    margin-top: 250px 0px 0px 350px;
+    width: 1600px;
+    height: 1000px;
+    display: block;
+      
 }
 
 .hero{
@@ -499,9 +499,10 @@ form h2 {
     color: white;
 }
 
-/* Media Queries */ 
+/* Media Queries */  
 
-@media (max-width: 500px) {
+
+@media  (max-width: 500px) {
   
     /* INICIO*/ 
     .historia-texto{
@@ -532,7 +533,7 @@ form h2 {
         font-size: large;
     }
 
-.historia-img{
+    .historia-img{
         width: 400px;
         height: 200px;
         margin-left: 2rem;
@@ -642,7 +643,6 @@ form h2 {
         text-align: center;
         margin: 10px;
     }
-
 
     }
 
