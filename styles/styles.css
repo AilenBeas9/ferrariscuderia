@@ -171,6 +171,10 @@ header{
     border: 2px solid rgba(0, 0, 0, 0.486);
 }
 
+.calendario:hover{
+    background-color: rgba(212, 171, 180, 0.911);
+}
+
 .imagen-calendario{
     width: 100px;
 }
@@ -376,6 +380,10 @@ header{
 
 }
 
+.form{
+    max-width: 100%;
+}
+
 form h2 {
     color: black ;
     font-size: 30px;
@@ -416,6 +424,7 @@ form h2 {
 .fila{
    padding: 10px;
    margin-top: 15px;
+   max-width: 100%;
    
 }
 
