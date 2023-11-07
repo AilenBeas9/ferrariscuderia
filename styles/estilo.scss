@@ -1,106 +1,29 @@
-@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital@1&family=Merriweather:ital,wght@1,300&family=Montserrat:ital,wght@1,300&family=Open+Sans&family=Roboto+Slab:wght@300&family=Young+Serif&display=swap');
+@import "./partials/variables";
 
+@import "./partials/reset";
 
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    flex-wrap: wrap;
-}
-
-*::selection{
-    background-color: #000000;
-    color: aliceblue;
-}
-
-
-   
-/* Menu css */ 
-
-.menu {
-    list-style-type: none;
-    background-color: white;
-    font-family: 'Montserrat', sans-serif;
-  
-}
-
-
-.menu__item {
-       display: inline-block;
-       margin-inline: 10px;
-}
-
-.menu__item a {
-    color: black;
-    text-decoration: none;
-}
-
-.menu__item.active a {
-     text-decoration: underline;
-}
+@import "./partials/header";
+@import "./partials/footer";
 
 /* Header css */ 
-
-header{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem 1rem;
-    border-bottom:  1px solid black;
-}
- 
-
-.logo-titulo{
-    font-size: 2rem;
-    font-weight: 300;
-    font-family: 'Young Serif', serif;
-}
-
-.logo-foto{
-    width: 30px;
-    height: 40px;
-} 
-
-.logo{
-    display: flex;
-}
 
 .contenedor-hero{
     display: flex;
     justify-content: center;
     align-items: center;
-    
-}
 
-.hero-img {
-    margin-top: 250px 0px 0px 350px;
-    width: 1500px;
-    display: block;  
-}
-
-.hero{
+    .hero{
     text-align: center;
+    .hero-img {
+        margin-top: 250px 0px 0px 350px;
+        width: 1500px;
+        display: block;  
+    }
 }
 
-.hero-title {
-    font-family: 'Libre Baskerville', serif;
-    font-size: xx-large;
-    color: black;
-    align-items: center;
-    font-weight: 400;
-    background-color: rgb(202, 67, 67);
-    
 }
 
 /* Main Incio css */ 
-
-.historia-img{
-    display: flex;
-    width: 1000px;
-    justify-content: center;
-}
-
-
 .titulo-historia{
     font-family: 'Young Serif', serif;
     font-size:xx-large;
@@ -109,25 +32,28 @@ header{
     text-decoration: underline;
 }
 
-
-
-.historia-texto{
-    font-family: 'Open Sans', sans-serif;
-    font-size: medium;
-    margin-top: 1rem;
-    line-height: 1.7;
-}
-
 .contendor-historia{
     display: flex;
     justify-content: center;
 
+    .historia-img{
+        display: flex;
+        width: 1000px;
+        justify-content: center;
+        width: 700px;
+        max-width: 100%;
+    }
+   
+    .historia-texto{
+        font-family: 'Open Sans', sans-serif;
+        font-size: medium;
+        margin-top: 1rem;
+        line-height: 1.7;
+    }
+
 }
-.historia-img{
-    width: 700px;
-    max-width: 100%;
-     
-}
+
+
 
 /* Video INICIO css*/ 
 
@@ -171,34 +97,73 @@ header{
 
 }
 .calendario{
+
+    -webkit-animation: scale-in-ver-center 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+                animation: scale-in-ver-center 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+
     padding: 3rem;
     background: rgba(172, 75, 75, 0.637);
     border: 2px solid rgba(0, 0, 0, 0.486);
-}
 
-.calendario:hover{
-    background-color: rgba(212, 171, 180, 0.911);
-}
+    &:hover{
+        background-color: rgba(200, 200, 224, 0.89);
+    }
 
-.imagen-calendario{
-    width: 100px;
-}
-
-.titulo-calendario{
-    text-align: end;
-    text-decoration: underline;
+    .titulo-calendario{
+        text-align: end;
+        text-decoration: underline;
+        
+    }
     
+    .texto-calendario{
+        text-align: center;
+    }
+   
+    
+    .imagen-calendario{
+        width: 100px;
+    }
+
+    .mes{ 
+        text-align: center;
+        text-decoration: overline;
+        margin-top: 0.2rem;
+        font-weight: 100;
+    }
+
+  
 }
 
-.texto-calendario{
-    text-align: center;
+.calen1{
+    animation-delay: 0.5s;
+}
+.calen2{
+    animation-delay: 0.6s;
+}
+.calen3{
+    animation-delay: 0.7s;
+}
+.calen4{
+    animation-delay: 0.8s;
 }
 
-.mes{ 
-    text-align: center;
-    text-decoration: overline;
-    margin-top: 0.2rem;
-    font-weight: 100;
+.calen5{
+    animation-delay: 0.5s;
+}
+.calen6{
+    animation-delay: 0.6s;
+}
+.calen7{
+    animation-delay: 0.7s;
+}
+.calen8{
+    animation-delay: 0.8s;
+}
+
+@for $calen from 1 through 8 {
+    .calendario#{$calen} {
+        animation-delay: $calen*1s;
+    }
 }
 
 /* Corredores css */ 
@@ -207,38 +172,32 @@ header{
     display: flex;
     justify-content: center;
     align-items: center;
+
+    .driver-caja h2:hover{ 
+        
+        color: rgb(175, 84, 77);   
+    }
+
+    .driver-foto{
+            -webkit-animation: scale-in-center 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+                    animation: scale-in-center 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+      
+        width: 600px;
+        margin-top: 2rem;
+        max-width: 100%;
+    }
+    .driver-foto2{
+          width: 200px;
+    }
+
+ 
 }
 
-.driver-foto{
-    width: 600px;
-    margin-top: 2rem;
-    max-width: 100%;
-}
-.driver-foto2{
-      width: 200px;
- }
 
 .driver-titulo{
      text-align: center;
      font-weight: 300;
      margin-top: 0.2rem;
-}
-
-.driver-caja h2:hover{
-  color: rgb(175, 84, 77);   
-}
-
-.driver-texto{
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: large;
-    text-align: start;
-    margin-top: 5rem;
-    Display: flex;
-    line-height: 1.8;    
-}
-
-.driver-texto h1::first-letter{
-    color: rgb(175, 84, 77);
 }
 
 .bandera{
@@ -247,21 +206,22 @@ header{
     margin: auto;
     box-shadow: 0 0 0 2px;
    
+
+.driver-texto{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: large;
+    text-align: start;
+    margin-top: 5rem;
+    Display: flex;
+    line-height: 1.8;    
+
+    &:first-child {
+        background-color: rgb(175, 84, 77);
+        
+    }
 }
 
-.driver-records{
-    font-family: 'Libre Baskerville', serif;
-    font-size: 20px;
-    background-color:rgba(17, 16, 16, 0.336) ;
-    width: 350px;
-    border-radius: 8px;
-    padding: 2rem;
-    margin: 2rem;
-    overflow: hidden;
-    line-height: 1.6;
-    
 }
-
 
 .carousel{
     width: 1000px;
@@ -270,31 +230,43 @@ header{
 .cartas-drivers{
     display: flex;
     justify-content: center;
+
+    .driver-records{
+        font-family: 'Libre Baskerville', serif;
+        font-size: 20px;
+        background-color:rgba(17, 16, 16, 0.336) ;
+        width: 350px;
+        border-radius: 8px;
+        padding: 2rem;
+        margin: 2rem;
+        overflow: hidden;
+        line-height: 1.6;
+        
+    }
 }
 
-
-
-.postcard-position{
-    width: 400px;
-    height: 500px;
-    padding: 3rem;
-}
 
 .caja-postcard{
     margin: 10rem 10rem;
     background-color: rgba(181, 182, 173, 0.753);
+
+    .postcard-position{
+        width: 400px;
+        height: 500px;
+        padding: 3rem;
+    }
 }
 
 .postcard-petition{
     margin: 10rem 10rem;
     text-align: center;
-}
 
-.btn{
-    background-color: rgb(202, 67, 67);
-    color: black;
-    padding: .2.5rem 1rem;
-    font-weight: 600;
+    .btn{
+        background-color: rgb(202, 67, 67);
+        color: black;
+        padding: .2.5rem 1rem;
+        font-weight: 600;
+    }
 }
 
 
@@ -332,10 +304,6 @@ header{
     justify-content:center;
     margin-bottom: 1rem;
 }
-
-
-
-
 
 /* Contactos css */ 
 
@@ -388,13 +356,14 @@ header{
 
 .form{
     max-width: 100%;
+    form h2 {
+        color: black ;
+        font-size: 30px;
+            
+    }
 }
 
-form h2 {
-    color: black ;
-    font-size: 30px;
-        
-}
+
 
 .form-text a:hover{
      color: black;
@@ -433,9 +402,6 @@ form h2 {
    max-width: 100%;
    
 }
-
-
-
 
 /* Footer css */ 
 
@@ -704,4 +670,55 @@ form h2 {
     }
 
     }
-
+@-webkit-keyframes scale-in-center {
+    0% {
+      -webkit-transform: scale(0);
+              transform: scale(0);
+      opacity: 1;
+    }
+    100% {
+      -webkit-transform: scale(1);
+              transform: scale(1);
+      opacity: 1;
+    }
+  }
+   /* animación corredores*/
+  @keyframes scale-in-center {
+    0% {
+      -webkit-transform: scale(0);
+              transform: scale(0);
+      opacity: 1;
+    }
+    100% {
+      -webkit-transform: scale(1);
+              transform: scale(1);
+      opacity: 1;
+    }
+  }
+  
+  /* animación calendario*/
+@-webkit-keyframes scale-in-ver-center{
+    0% {
+      -webkit-transform: scaleY(0);
+              transform: scaleY(0);
+      opacity: 1;
+    }
+    100% {
+      -webkit-transform: scaleY(1);
+              transform: scaleY(1);
+      opacity: 1;
+    }
+  }
+  @keyframes scale-in-ver-center {
+    0% {
+      -webkit-transform: scaleY(0);
+              transform: scaleY(0);
+      opacity: 1;
+    }
+    100% {
+      -webkit-transform: scaleY(1);
+              transform: scaleY(1);
+      opacity: 1;
+    }
+  }
+  

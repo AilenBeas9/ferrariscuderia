@@ -1,0 +1,732 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital@1&family=Merriweather:ital,wght@1,300&family=Montserrat:ital,wght@1,300&family=Open+Sans&family=Roboto+Slab:wght@300&family=Young+Serif&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  flex-wrap: wrap;
+}
+*::-moz-selection {
+  background-color: #000000;
+  color: aliceblue;
+}
+*::selection {
+  background-color: #000000;
+  color: aliceblue;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 1rem;
+  border-bottom: 1px solid black;
+}
+header .logo {
+  display: flex;
+}
+header .logo .logo-titulo {
+  font-size: 2rem;
+  font-weight: 300;
+  font-family: "Young Serif", serif;
+}
+header .logo .logo-foto {
+  width: 30px;
+  height: 40px;
+}
+
+.menu {
+  list-style-type: none;
+  background-color: white;
+  font-family: "Montserrat", sans-serif;
+}
+.menu .menu__item {
+  display: inline-block;
+  margin-inline: 10px;
+}
+.menu .menu__item .menu__item a {
+  color: black;
+  text-decoration: none;
+}
+.menu .menu__item .menu__item.active a {
+  text-decoration: underline;
+}
+
+.footer {
+  background-color: black;
+}
+.footer .footercontenedor {
+  width: 100%;
+  padding: 70px 30px 20px;
+}
+.footer .socialicons {
+  display: flex;
+  justify-content: center;
+}
+.footer .socialicons .socialicons a {
+  text-decoration: none;
+  padding: 10px;
+  background-color: white;
+  margin: 10px;
+  border-radius: 50%;
+}
+.footer .socialicons .socialicons a i {
+  font-size: 2em;
+  color: black;
+  opacity: 0.9;
+}
+.footer .socialicons .socialicons a:hover {
+  background-color: black;
+  transition: 0.5s;
+}
+.footer .socialicons .socialicons a:hover i {
+  color: white;
+  transition: 0.5s;
+}
+
+.footernav {
+  margin: 3px 0;
+}
+.footernav .footernav ul {
+  display: flex;
+  justify-content: center;
+  list-style-type: none;
+}
+.footernav .footernav ul li a {
+  color: white;
+  margin: 20px;
+  text-decoration: none;
+  font-size: 1.3em;
+  opacity: 0.7;
+  transition: 0.5s;
+}
+.footernav .footernav ul li a:hover {
+  opacity: 1;
+}
+
+.footerbottom {
+  background-color: #000;
+  padding: 20px;
+  text-align: center;
+}
+.footerbottom .footerbottom p {
+  color: white;
+}
+
+/* Header css */
+.contenedor-hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.contenedor-hero .hero {
+  text-align: center;
+}
+.contenedor-hero .hero .hero-img {
+  margin-top: 250px 0px 0px 350px;
+  width: 1500px;
+  display: block;
+}
+
+/* Main Incio css */
+.titulo-historia {
+  font-family: "Young Serif", serif;
+  font-size: xx-large;
+  font-weight: 300;
+  text-align: center;
+  text-decoration: underline;
+}
+
+.contendor-historia {
+  display: flex;
+  justify-content: center;
+}
+.contendor-historia .historia-img {
+  display: flex;
+  width: 1000px;
+  justify-content: center;
+  width: 700px;
+  max-width: 100%;
+}
+.contendor-historia .historia-texto {
+  font-family: "Open Sans", sans-serif;
+  font-size: medium;
+  margin-top: 1rem;
+  line-height: 1.7;
+}
+
+/* Video INICIO css*/
+.video-titulo {
+  font-size: xx-large;
+  font-weight: 100;
+  padding: 2rem 2rem;
+  background-color: rgb(0, 0, 0);
+  color: white;
+}
+
+.video-article {
+  display: flex;
+  justify-content: center;
+  padding: 3rem 3rem;
+  background-color: rgb(146, 74, 74);
+  border: 1px solid #000;
+}
+
+.youtube {
+  width: 5rem;
+  margin-left: 30rem;
+}
+
+/*Proximas carreras css */
+.carreras-titulo {
+  padding: 3rem;
+  text-align: center;
+  font-size: 70px;
+  font-weight: 300;
+  background-color: rgba(172, 75, 75, 0.637);
+}
+
+.caja-carreras {
+  padding: 2rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 2rem;
+}
+
+.calendario {
+  animation: scale-in-ver-center 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  padding: 3rem;
+  background: rgba(172, 75, 75, 0.637);
+  border: 2px solid rgba(0, 0, 0, 0.486);
+}
+.calendario:hover {
+  background-color: rgba(200, 200, 224, 0.89);
+}
+.calendario .titulo-calendario {
+  text-align: end;
+  text-decoration: underline;
+}
+.calendario .texto-calendario {
+  text-align: center;
+}
+.calendario .imagen-calendario {
+  width: 100px;
+}
+.calendario .mes {
+  text-align: center;
+  text-decoration: overline;
+  margin-top: 0.2rem;
+  font-weight: 100;
+}
+
+.calen1 {
+  animation-delay: 0.5s;
+}
+
+.calen2 {
+  animation-delay: 0.6s;
+}
+
+.calen3 {
+  animation-delay: 0.7s;
+}
+
+.calen4 {
+  animation-delay: 0.8s;
+}
+
+.calen5 {
+  animation-delay: 0.5s;
+}
+
+.calen6 {
+  animation-delay: 0.6s;
+}
+
+.calen7 {
+  animation-delay: 0.7s;
+}
+
+.calen8 {
+  animation-delay: 0.8s;
+}
+
+.calendario1 {
+  animation-delay: 1s;
+}
+
+.calendario2 {
+  animation-delay: 2s;
+}
+
+.calendario3 {
+  animation-delay: 3s;
+}
+
+.calendario4 {
+  animation-delay: 4s;
+}
+
+.calendario5 {
+  animation-delay: 5s;
+}
+
+.calendario6 {
+  animation-delay: 6s;
+}
+
+.calendario7 {
+  animation-delay: 7s;
+}
+
+.calendario8 {
+  animation-delay: 8s;
+}
+
+/* Corredores css */
+.driver-caja {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.driver-caja .driver-caja h2:hover {
+  color: rgb(175, 84, 77);
+}
+.driver-caja .driver-foto {
+  animation: scale-in-center 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  width: 600px;
+  margin-top: 2rem;
+  max-width: 100%;
+}
+.driver-caja .driver-foto2 {
+  width: 200px;
+}
+
+.driver-titulo {
+  text-align: center;
+  font-weight: 300;
+  margin-top: 0.2rem;
+}
+
+.bandera {
+  width: 40px;
+  display: flex;
+  margin: auto;
+  box-shadow: 0 0 0 2px;
+}
+.bandera .driver-texto {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: large;
+  text-align: start;
+  margin-top: 5rem;
+  Display: flex;
+  line-height: 1.8;
+}
+.bandera .driver-texto:first-child {
+  background-color: rgb(175, 84, 77);
+}
+
+.carousel {
+  width: 1000px;
+}
+
+.cartas-drivers {
+  display: flex;
+  justify-content: center;
+}
+.cartas-drivers .driver-records {
+  font-family: "Libre Baskerville", serif;
+  font-size: 20px;
+  background-color: rgba(17, 16, 16, 0.336);
+  width: 350px;
+  border-radius: 8px;
+  padding: 2rem;
+  margin: 2rem;
+  overflow: hidden;
+  line-height: 1.6;
+}
+
+.caja-postcard {
+  margin: 10rem 10rem;
+  background-color: rgba(181, 182, 173, 0.753);
+}
+.caja-postcard .postcard-position {
+  width: 400px;
+  height: 500px;
+  padding: 3rem;
+}
+
+.postcard-petition {
+  margin: 10rem 10rem;
+  text-align: center;
+}
+.postcard-petition .btn {
+  background-color: rgb(202, 67, 67);
+  color: black;
+  padding: 0.2 0.5rem 1rem;
+  font-weight: 600;
+}
+
+/* Formulario Postcard css */
+.tabla {
+  margin-top: 2rem;
+  color: rgb(194, 84, 84);
+  font-size: x-large;
+  display: flex;
+  justify-content: center;
+}
+
+.form-postcard {
+  margin-left: 4rem;
+  margin-top: 3rem;
+}
+
+.form-post {
+  font-family: Arial, Helvetica, sans-serif;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(189, 149, 97, 0.582);
+}
+
+.correo-postcard {
+  font-size: x-large;
+  text-align: center;
+}
+
+.pais-postcard {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+/* Contactos css */
+.contacto-texto1 {
+  font-family: "Libre Baskerville", serif;
+  background-color: rgb(175, 84, 77);
+  padding-top: 55px;
+  text-align: center;
+}
+
+.contacto-texto {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: large;
+  font-weight: 100;
+  background-color: rgb(175, 84, 77);
+  text-align: center;
+  padding-top: 60px;
+}
+
+.contactos-titulo {
+  font-family: "Young Serif", serif;
+  font-weight: 300;
+  padding-block: 10px;
+  text-align: center;
+  background-color: black;
+  color: white;
+}
+
+.formulario-cont {
+  font-family: Arial, Helvetica, sans-serif;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(175, 84, 77);
+}
+
+.formulario-contactos {
+  padding: 40px 35px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  border-radius: 20px;
+  text-align: center;
+  width: 340px;
+  background-color: rgba(0, 0, 0, 0.411);
+}
+
+.form {
+  max-width: 100%;
+}
+.form form h2 {
+  color: black;
+  font-size: 30px;
+}
+
+.form-text a:hover {
+  color: black;
+}
+
+.form-text a {
+  color: white;
+  text-decoration: none;
+  font-size: 15px;
+  margin-bottom: 10px;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  padding-top: 15px;
+}
+
+.input, textarea {
+  padding: 20px 10px;
+  border: 0;
+  border-radius: 10px;
+  font-size: 15px;
+  color: rgb(192, 31, 31);
+}
+
+::-moz-placeholder {
+  color: black;
+  font-size: 15px;
+}
+
+::placeholder {
+  color: black;
+  font-size: 15px;
+}
+
+.fila {
+  padding: 10px;
+  margin-top: 15px;
+  max-width: 100%;
+}
+
+/* Footer css */
+.footer {
+  background-color: black;
+}
+
+.footercontenedor {
+  width: 100%;
+  padding: 70px 30px 20px;
+}
+
+.socialicons {
+  display: flex;
+  justify-content: center;
+}
+
+.socialicons a {
+  text-decoration: none;
+  padding: 10px;
+  background-color: white;
+  margin: 10px;
+  border-radius: 50%;
+}
+
+.socialicons a i {
+  font-size: 2em;
+  color: black;
+  opacity: 0.9;
+}
+
+.socialicons a:hover {
+  background-color: black;
+  transition: 0.5s;
+}
+
+.socialicons a:hover i {
+  color: white;
+  transition: 0.5s;
+}
+
+.footernav {
+  margin: 3px 0;
+}
+
+.footernav ul {
+  display: flex;
+  justify-content: center;
+  list-style-type: none;
+}
+
+.footernav ul li a {
+  color: white;
+  margin: 20px;
+  text-decoration: none;
+  font-size: 1.3em;
+  opacity: 0.7;
+  transition: 0.5s;
+}
+
+.footernav ul li a:hover {
+  opacity: 1;
+}
+
+.footerbottom {
+  background-color: #000;
+  padding: 20px;
+  text-align: center;
+}
+
+.footerbottom p {
+  color: white;
+}
+
+/* Media Queries */
+@media (max-width: 450px) {
+  /*inicio*/
+  .menu {
+    font-size: smaller;
+    text-align: center;
+  }
+  .logo-titulo {
+    font-size: 1.5rem;
+  }
+  .logo-foto {
+    width: 15px;
+    height: 20px;
+  }
+  .titulo-historia {
+    margin-top: 3rem;
+  }
+  /*Corredores*/
+  .carousel {
+    width: 100px;
+  }
+  .driver-foto {
+    width: 100px;
+  }
+}
+@media (max-width: 1400px) {
+  /*inicio*/
+  .hero-img {
+    width: 1300px;
+  }
+  /*prox-carreras*/
+  .caja-carreras {
+    grid-template-columns: 1fr 1fr;
+  }
+  /*corredores*/
+  .carousel {
+    width: 600px;
+  }
+}
+@media (max-width: 600px) {
+  /* INICIO*/
+  .historia-texto {
+    font-family: "Roboto Slab", serif;
+    font-size: medium;
+    Display: flex;
+    margin-top: 1rem;
+    line-height: 1.7;
+  }
+  .hero-img {
+    width: 700px;
+    display: block;
+    max-width: 100%;
+  }
+  header {
+    display: flex;
+    justify-content: space-between;
+  }
+  .titulo-historia {
+    font-size: large;
+  }
+  .historia-img {
+    width: 400px;
+    height: 200px;
+    margin-left: 2rem;
+    margin-right: 2rem;
+  }
+  /*PROXIMAS CARRERAS*/
+  .carreras-titulo {
+    font-size: 40px;
+  }
+  .caja-carreras {
+    grid-template-columns: 1fr;
+  }
+  .calendario:hover {
+    background-color: rgba(180, 4, 4, 0.247);
+  }
+  .imagen-calendario {
+    width: 150px;
+  }
+  /*CORREDORES*/
+  .driver-foto {
+    width: 450px;
+  }
+  .driver-foto2 {
+    width: 150px;
+  }
+  .driver-texto {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: medium;
+    Display: flex;
+    margin-top: 1rem;
+    line-height: 1.7;
+    padding: 1.5rem;
+  }
+  .driver-records {
+    font-family: "Libre Baskerville", serif;
+    font-size: 16px;
+    background-color: rgba(119, 1, 1, 0.445);
+    width: 380px;
+    border-radius: 8px;
+    padding: 1rem;
+    margin: 1rem;
+    overflow: hidden;
+  }
+  .carousel {
+    width: 450px;
+    margin-left: 0.6rem;
+    margin-right: 1rem;
+  }
+  .caja-postcard {
+    margin: 6rem 6rem;
+    background-color: rgba(181, 182, 173, 0.753);
+    border: 1px solid black;
+  }
+  .postcard-position {
+    width: 300px;
+    height: 400px;
+  }
+  .postcard-petition {
+    margin: 10rem 10rem;
+    text-align: center;
+  }
+  /* FORMULARIO POSTCARD */
+  .titulo-formulario {
+    padding: 1rem;
+    text-align: center;
+  }
+  .tabla {
+    margin: 3rem;
+    display: flex;
+    justify-content: center;
+  }
+  /*FOOTER*/
+  .footernav ul {
+    flex-direction: column;
+  }
+  .footernav ul li {
+    width: 100%;
+    text-align: center;
+    margin: 10px;
+  }
+}
+/* animación corredores*/
+@keyframes scale-in-center {
+  0% {
+    transform: scale(0);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+/* animación calendario*/
+@keyframes scale-in-ver-center {
+  0% {
+    transform: scaleY(0);
+    opacity: 1;
+  }
+  100% {
+    transform: scaleY(1);
+    opacity: 1;
+  }
+}/*# sourceMappingURL=estilo.css.map */
