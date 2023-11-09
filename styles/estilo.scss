@@ -15,9 +15,9 @@
     .hero{
     text-align: center;
     .hero-img {
-        margin-top: 250px 0px 0px 350px;
-        width: 1500px;
-        display: block;  
+        margin-top: 0 auto;
+        width: 100%;
+          
     }
 }
 
@@ -565,7 +565,7 @@ h2:hover{
 
     /*inicio*/  
     .hero-img{
-        width: 1300px;
+        width: 100%;
     }
 
     /*prox-carreras*/  
@@ -592,7 +592,7 @@ h2:hover{
     }
 
     .hero-img{
-      width: 700px;
+      width: 100%;
       display: block;
       max-width: 100%;
     }

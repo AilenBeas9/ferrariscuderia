@@ -6,11 +6,6 @@
   box-sizing: border-box;
   flex-wrap: wrap;
 }
-
-.img{
-  max-width: 100%;
-}
-
 *::-moz-selection {
   background-color: #000000;
   color: aliceblue;
@@ -129,9 +124,8 @@ header .logo .logo-foto {
   text-align: center;
 }
 .contenedor-hero .hero .hero-img {
-  margin-top: 250px 0px 0px 350px;
-  width: 1500px;
-  display: block;
+  margin-top: 0 auto;
+  width: 100%;
 }
 
 /* Main Incio css */
