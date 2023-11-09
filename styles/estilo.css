@@ -6,6 +6,11 @@
   box-sizing: border-box;
   flex-wrap: wrap;
 }
+
+.img{
+  max-width: 100%;
+}
+
 *::-moz-selection {
   background-color: #000000;
   color: aliceblue;
@@ -94,7 +99,8 @@ header .logo .logo-foto {
 }
 .footernav .footernav ul li a {
   color: white;
-  margin: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
   text-decoration: none;
   font-size: 1.3em;
   opacity: 0.7;
@@ -356,6 +362,7 @@ h2:hover {
 .carousel {
   width: 1000px;
   margin: 0 auto;
+  max-width: 100%;
 }
 
 .cartas-drivers {
@@ -380,7 +387,6 @@ h2:hover {
 }
 .caja-postcard .postcard-position {
   width: 400px;
-  height: 500px;
   padding: 3rem;
 }
 

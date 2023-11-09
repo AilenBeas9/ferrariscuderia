@@ -252,6 +252,7 @@ h2:hover{
 .carousel{
     width: 1000px;
     margin: 0 auto;
+    max-width: 100%;
 }
 
 
@@ -281,10 +282,10 @@ h2:hover{
 .caja-postcard{
     margin: 10rem 10rem;
     background-color: rgba(181, 182, 173, 0.753);
-
+    
     .postcard-position{
         width: 400px;
-        height: 500px;
+
         padding: 3rem;
     }
 }
