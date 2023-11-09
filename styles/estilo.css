@@ -44,11 +44,11 @@ header .logo .logo-foto {
   display: inline-block;
   margin-inline: 10px;
 }
-.menu .menu__item .menu__item a {
+.menu .menu__item a {
   color: black;
   text-decoration: none;
 }
-.menu .menu__item .menu__item.active a {
+.menu .menu__item :active {
   text-decoration: underline;
 }
 
@@ -135,24 +135,53 @@ header .logo .logo-foto {
   font-weight: 300;
   text-align: center;
   text-decoration: underline;
+  margin-top: 2rem;
 }
 
 .contendor-historia {
   display: flex;
   justify-content: center;
+  align-items: center;
 }
 .contendor-historia .historia-img {
   display: flex;
-  width: 1000px;
   justify-content: center;
   width: 700px;
   max-width: 100%;
 }
 .contendor-historia .historia-texto {
   font-family: "Open Sans", sans-serif;
-  font-size: medium;
   margin-top: 1rem;
   line-height: 1.7;
+  flex-wrap: wrap;
+  font-size: large;
+}
+
+.historia-final {
+  padding: 1rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  width: 900px;
+  background-color: rgb(146, 74, 74);
+}
+.historia-final:hover {
+  color: aliceblue;
+}
+.historia-final .historia-final2 {
+  font-family: "Open Sans", sans-serif;
+  line-height: 1.7;
+  flex-wrap: wrap;
+  font-size: large;
+}
+.historia-final .historia-final2:hover {
+  color: aliceblue;
+}
+
+.grid-text {
+  padding: 1rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  width: 600px;
 }
 
 /* Video INICIO css*/
@@ -193,26 +222,26 @@ header .logo .logo-foto {
   gap: 2rem;
 }
 
-.calendario {
+.calendario, .driver-records {
   animation: scale-in-ver-center 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
   padding: 3rem;
   background: rgba(172, 75, 75, 0.637);
   border: 2px solid rgba(0, 0, 0, 0.486);
 }
-.calendario:hover {
+.calendario:hover, .driver-records:hover {
   background-color: rgba(200, 200, 224, 0.89);
 }
-.calendario .titulo-calendario {
+.calendario .titulo-calendario, .driver-records .titulo-calendario {
   text-align: end;
   text-decoration: underline;
 }
-.calendario .texto-calendario {
+.calendario .texto-calendario, .driver-records .texto-calendario {
   text-align: center;
 }
-.calendario .imagen-calendario {
+.calendario .imagen-calendario, .driver-records .imagen-calendario {
   width: 100px;
 }
-.calendario .mes {
+.calendario .mes, .driver-records .mes {
   text-align: center;
   text-decoration: overline;
   margin-top: 0.2rem;
@@ -289,9 +318,6 @@ header .logo .logo-foto {
   justify-content: center;
   align-items: center;
 }
-.driver-caja .driver-caja h2:hover {
-  color: rgb(175, 84, 77);
-}
 .driver-caja .driver-foto {
   animation: scale-in-center 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
   width: 600px;
@@ -300,6 +326,10 @@ header .logo .logo-foto {
 }
 .driver-caja .driver-foto2 {
   width: 200px;
+}
+
+h2:hover {
+  color: rgb(175, 84, 77);
 }
 
 .driver-titulo {
@@ -319,15 +349,13 @@ header .logo .logo-foto {
   font-size: large;
   text-align: start;
   margin-top: 5rem;
-  Display: flex;
   line-height: 1.8;
-}
-.bandera .driver-texto:first-child {
-  background-color: rgb(175, 84, 77);
+  overflow: hidden;
 }
 
 .carousel {
   width: 1000px;
+  margin: 0 auto;
 }
 
 .cartas-drivers {
@@ -401,7 +429,22 @@ header .logo .logo-foto {
   margin-bottom: 1rem;
 }
 
-/* Contactos css */
+.logo-formulario {
+  width: 30px;
+  height: 40px;
+}
+
+/*Resultados scss */
+.resultados-titulo {
+  padding: 2rem;
+  text-align: center;
+  background-color: rgba(212, 171, 180, 0.911);
+}
+.resultados-titulo:hover {
+  background-color: rgba(200, 200, 224, 0.89);
+}
+
+/* Contactos scss */
 .contacto-texto1 {
   font-family: "Libre Baskerville", serif;
   background-color: rgb(175, 84, 77);
@@ -639,7 +682,7 @@ header .logo .logo-foto {
   .caja-carreras {
     grid-template-columns: 1fr;
   }
-  .calendario:hover {
+  .calendario:hover, .driver-records:hover {
     background-color: rgba(180, 4, 4, 0.247);
   }
   .imagen-calendario {

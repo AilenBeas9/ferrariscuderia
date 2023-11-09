@@ -30,30 +30,62 @@
     font-weight: 300;
     text-align: center;
     text-decoration: underline;
+    margin-top: 2rem;
 }
 
 .contendor-historia{
     display: flex;
     justify-content: center;
-
+    align-items: center;
+    
     .historia-img{
         display: flex;
-        width: 1000px;
         justify-content: center;
         width: 700px;
         max-width: 100%;
+      
     }
    
     .historia-texto{
         font-family: 'Open Sans', sans-serif;
-        font-size: medium;
         margin-top: 1rem;
         line-height: 1.7;
+        flex-wrap: wrap;
+        font-size: large;
     }
 
 }
 
+.historia-final{
+    padding: 1rem;
+    display: grid;
+    grid-template-columns: 1fr;
+    width: 900px;
+    background-color: $maincolor;
+    &:hover{
+        color: aliceblue;
+    }
+    
+    .historia-final2{
+        font-family: 'Open Sans', sans-serif;
+        line-height: 1.7;
+        flex-wrap: wrap;
+        font-size: large;
+        &:hover{
+            color: aliceblue;
+        }
+    }
+}
 
+
+
+
+.grid-text{
+    padding: 1rem;
+    display: grid;
+    grid-template-columns: 1fr;
+    width: 600px;
+}
 
 /* Video INICIO css*/ 
 
@@ -172,11 +204,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-
-    .driver-caja h2:hover{ 
-        
-        color: rgb(175, 84, 77);   
-    }
+    
 
     .driver-foto{
             -webkit-animation: scale-in-center 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
@@ -189,15 +217,18 @@
     .driver-foto2{
           width: 200px;
     }
-
- 
 }
 
+h2:hover{
+    color:rgb(175, 84, 77) ;
+}
 
 .driver-titulo{
      text-align: center;
      font-weight: 300;
      margin-top: 0.2rem;
+
+    
 }
 
 .bandera{
@@ -212,25 +243,22 @@
     font-size: large;
     text-align: start;
     margin-top: 5rem;
-    Display: flex;
-    line-height: 1.8;    
-
-    &:first-child {
-        background-color: rgb(175, 84, 77);
-        
-    }
+    line-height: 1.8;
+    overflow: hidden;
 }
 
 }
 
 .carousel{
     width: 1000px;
+    margin: 0 auto;
 }
+
 
 .cartas-drivers{
     display: flex;
     justify-content: center;
-
+    
     .driver-records{
         font-family: 'Libre Baskerville', serif;
         font-size: 20px;
@@ -243,6 +271,10 @@
         line-height: 1.6;
         
     }
+}
+
+.driver-records{
+    @extend .calendario
 }
 
 
@@ -305,7 +337,21 @@
     margin-bottom: 1rem;
 }
 
-/* Contactos css */ 
+.logo-formulario{
+    width: 30px;
+    height: 40px;
+}
+/*Resultados scss */ 
+.resultados-titulo{
+   padding: 2rem;
+   text-align: center;
+    background-color: rgba(212, 171, 180, 0.911); ;
+    &:hover{
+        background-color: rgba(200, 200, 224, 0.89);
+    }
+}
+
+/* Contactos scss */ 
 
 .contacto-texto1{
     font-family: 'Libre Baskerville', serif;
